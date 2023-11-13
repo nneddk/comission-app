@@ -1,0 +1,26 @@
+html, body, #root{
+    margin: 0;
+    height:100%;
+}
+.App {
+    margin: 0;
+    height:100vh;
+}
+.content{
+    margin: 0;
+    height:100vh;
+    display:grid;
+    grid-template-rows:  0.5r 10fr;
+}
+
+.toolbar{
+    position:absolute;
+    z-index: 2;
+    top:90vh;
+    left:90vw;
+}
+
+.toolbar>button{
+    height:8vmin;
+    width:8vmin;
+}

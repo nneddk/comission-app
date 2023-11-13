@@ -1,0 +1,28 @@
+.history-display{
+    border:solid yellow;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap:20px;
+    padding: 20px;
+    overflow-y: scroll;
+    
+}
+.history-card{
+    border:solid black;
+    width: 320px;
+    height: 500px;
+    display:grid;
+    grid-template-rows: 5fr 2fr 1fr 1fr 1fr;
+    gap:20px;
+    border-radius: 10px;
+    justify-self: center;
+}
+.history-card>div{
+    border:solid;
+}
+
+.history-card-price{
+
+}
+.history-card-name{
+}
