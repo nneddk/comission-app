@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
 html, body, #root{
     margin: 0;
     height:100%;
+
+    font-family: 'Roboto', sans-serif;
 }
+
 .App {
     margin: 0;
     height:100vh;
@@ -10,17 +14,33 @@ html, body, #root{
     margin: 0;
     height:100vh;
     display:grid;
-    grid-template-rows:  0.5r 10fr;
+    grid-template-rows:  1r 10fr;
 }
 
 .toolbar{
     position:absolute;
     z-index: 2;
     top:90vh;
-    left:90vw;
+    left:95vw;
 }
 
 .toolbar>button{
     height:8vmin;
     width:8vmin;
+}
+
+.add-btn{
+    height:5vmin;
+    width:5vmin;
+    border:none;
+    font-size: 28px;
+    border-radius: 9999px;
+    color:white;
+    background-color: black;
+    justify-self: end;
+    transition: all 0.3s ease-out;
+}
+.add-btn:hover{
+    color:rgb(94, 94, 94);    
+    background-color: white;
 }

@@ -28,7 +28,7 @@ const Content = () =>{
                 React.createElement('div', {className: 'history-card-name', key: uniqid()},val['name']),
                 React.createElement('div', {className: 'history-card-email', key: uniqid()},val['email']),
                 React.createElement('div', {className: 'history-card-date', key: uniqid()},val['date']),
-                React.createElement('button', {type: 'button', className: 'history-card-delete', key: uniqid(), id:val["key"], onClick:deleteCard },"x")
+                React.createElement('button', {type: 'button', className: 'history-card-delete', key: uniqid(), id:val["key"], onClick:deleteCard })
             )
         ));
         return children;
@@ -62,8 +62,7 @@ const Content = () =>{
         const children = cardData.map((val)=>(
             React.createElement('div', {className: 'top-card', key: uniqid()},
                 React.createElement('div', {className: 'top-card-price', key: uniqid()},val['price']),
-                React.createElement('div', {className: 'top-name', key: uniqid()},val['name']),
-                React.createElement('div', {className: 'top-email', key: uniqid()},val['email']),
+                React.createElement('div', {className: 'top-card-name', key: uniqid()},val['name'])
             )
         ));
         return children;
@@ -73,6 +72,9 @@ const Content = () =>{
         const tempData = await(getAll());
         setDbData(tempData);
     }
+    const refreshPage = () =>{
+        setForce(Math.random());
+    }
     useEffect(()=>{
         fetchData();
     
@@ -80,7 +82,8 @@ const Content = () =>{
   return(
     React.createElement('div', {className: 'content'}, 
     React.createElement('div', {className: 'top-display'}, CreateTopCard()), 
-    React.createElement('div', {className: 'history-display'}, CreateHistoryCard()) 
+    React.createElement('div', {className: 'history-display'}, CreateHistoryCard()),
+    React.createElement('button',{type:'button',className: 'refresh-btn', onClick:refreshPage}) 
     )
   )
 };

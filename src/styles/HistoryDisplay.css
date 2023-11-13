@@ -1,28 +1,87 @@
 .history-display{
-    border:solid yellow;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap:20px;
-    padding: 20px;
+    padding: 100px;
+    padding-top: 20px;
     overflow-y: scroll;
+    background-color: lightgray;
     
 }
 .history-card{
-    border:solid black;
+    border:solid 2px rgb(94, 94, 94);
     width: 320px;
-    height: 500px;
+    height: 400px;
     display:grid;
-    grid-template-rows: 5fr 2fr 1fr 1fr 1fr;
-    gap:20px;
-    border-radius: 10px;
-    justify-self: center;
+    grid-template-rows: 5fr 1fr 0.5fr 0.5fr 1fr;
+    border-radius: 5px;
+    align-items: end;
+    justify-content: center;
+    
 }
 .history-card>div{
-    border:solid;
+    color: rgb(94, 94, 94);
+    text-align: end;
+    width:300px;
 }
-
 .history-card-price{
-
+    font-size: 64px;
+    border-bottom:solid 2px rgb(94, 94, 94);
 }
 .history-card-name{
+    font-size: 24px;
+    padding-top: 20px;
+}
+.history-card-email{
+    
+    font-size: 12px;
+}
+.history-card-date{
+    margin-top: 24px;
+    font-size: 12px;
+}
+.history-card-delete{
+    width:5vmin;
+    height:5vmin;
+    justify-self: end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:none;
+    border-radius: 9999px;
+    color:rgb(94, 94, 94);
+    justify-self: end;
+    transition: all 0.1s ease-out;
+    background-color: lightgrey;
+
+    background-image: url(../logos/trash.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    
+}
+.history-card-delete:hover{
+    opacity:0.5;
+}
+.refresh-btn{
+    position:absolute;
+    z-index: 2;
+    top:80vh;
+    left:95vw;
+    height:8vmin;
+    width:8vmin;
+
+    border:none;
+    border-radius: 9999px;
+    color:rgb(94, 94, 94);
+    justify-self: end;
+    transition: all 0.1s ease-out;
+    background-color: lightgrey;
+
+    background-image: url(../logos/refresh.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+.refresh-btn:hover{
+    opacity:0.5;
 }

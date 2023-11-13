@@ -1,34 +1,34 @@
 .top-display{
-    border:solid red;
     gap:20px;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     
-    padding: 20px;
+    padding: 100px;
     padding-top: 8px;
-    padding-bottom: 0;
-    height: 12vh;
+    padding-bottom: 8px;
+    height:10vh;    
+    background-color: lightgray;
 }
 
 .top-card{
     justify-self: center;
     align-self: center;
-    border:solid blue;
-    border-radius: 10px;
+    border-radius: 5px;
     display:grid;
-    grid-template-rows: 1.5fr 1.5fr 0.5fr;
+    grid-template-rows: 2fr 1fr;
     padding: 10px;
     width:300px;
+    height:80px;
+    color:rgb(94, 94, 94);
+}
 
+.top-card-price{
+    font-size: 42px;
 }
-.top-comission-card-price{
-    justify-self: center;
-    align-self: center;
-    font-size: 24px;
-}
-.top-comission-card-name{
-    justify-self: center;
-    align-self: center;
+.top-card-name{
     font-size: 12px;
+    padding-top:4px;
+    border-top: solid 2px rgb(94, 94, 94);
 }

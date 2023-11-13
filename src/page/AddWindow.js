@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { post } from '../gateway';
+import '../styles/AddWindow.css';
 class AddWindow extends Component{
   constructor(){
     super();
@@ -50,12 +51,24 @@ class AddWindow extends Component{
   }
   render(){
     return(
-        <div className='Form'>
+        <div className='add-form'>
+        Add Comission
         <form onSubmit={this.postData} className='form-div'>
-            <input className='input-box' onChange={this.handleChange} type = 'number' id = 'price' autoComplete ='off' required value ={this.state.price}placeholder='Input Price'></input>
-          <input className='input-box' onChange={this.handleChange} type = 'text' id = 'full-name' autoComplete ='off' required value ={this.state.name}placeholder='Name'></input>
-          <input className='input-box' onChange={this.handleChange} type = 'email' id = 'email' autoComplete='off' required value ={this.state.email}placeholder ='Email'></input>
-          <button type = 'submit'>Submit</button>
+            <div className='input-text'>
+                <input className='input-box' onChange={this.handleChange} type = 'number' id = 'price' autoComplete ='off' required value ={this.state.price}></input>
+                <label className='price-label'for = 'price'>Price</label>
+            </div>
+            <div className='input-text'>
+                <input className='input-box' onChange={this.handleChange} type = 'text' id = 'full-name' autoComplete ='off' required value ={this.state.name}></input>
+                <label className='name-label'for = 'full-name'>Name</label>
+            </div>
+            <div className='input-text'>
+                <input className='input-box' onChange={this.handleChange} type = 'email' id = 'email' autoComplete='off' required value ={this.state.email}></input>
+                <label className='email-label' for = 'email'>Email</label>
+            </div>
+            
+            
+            <button type = 'submit' className='submit-btn'>+</button>
         </form>
       </div>
     );
